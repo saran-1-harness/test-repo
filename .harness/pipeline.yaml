@@ -1,6 +1,6 @@
 pipeline:
-  name: test
-  identifier: test
+  name: test-12332
+  identifier: test_12332
   projectIdentifier: saran_test
   orgIdentifier: default
   tags: {}
