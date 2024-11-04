@@ -1,6 +1,6 @@
 pipeline:
-  name: test-123321
-  identifier: test_123321
+  name: test-123321-pipe-4
+  identifier: test_123321_pipe_4
   projectIdentifier: saran_test
   orgIdentifier: default
   tags: {}
