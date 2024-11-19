@@ -1,0 +1,30 @@
+pipeline:
+  name: test-1233211
+  identifier: test_1233211
+  projectIdentifier: saran_test
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo hello
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
