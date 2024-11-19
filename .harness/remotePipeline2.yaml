@@ -29,7 +29,7 @@ pipeline:
                                 spec:
                                   extractionScript: <+input>
               - serviceRef: servce1
-              - serviceRef: servce1
+              - serviceRef: servce11
             metadata:
               parallel: true
           environments:
