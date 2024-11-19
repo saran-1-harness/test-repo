@@ -4,7 +4,7 @@ pipeline:
   projectIdentifier: saran_test
   orgIdentifier: default
   tags: {}
-  description: 'sample description'
+  description: sample description
   stages:
     - stage:
         name: s1
