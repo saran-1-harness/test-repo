@@ -1,6 +1,6 @@
 pipeline:
-  name: remote-pipeline2
-  identifier: remotepipeline2
+  name: remote-pipeline21
+  identifier: remotepipeline21
   projectIdentifier: testproj
   orgIdentifier: default
   tags: {}
