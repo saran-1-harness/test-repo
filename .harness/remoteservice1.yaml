@@ -1,0 +1,5 @@
+service:
+  name: remote-service-1
+  identifier: remoteservice1
+  orgIdentifier: default
+  projectIdentifier: saran_test
