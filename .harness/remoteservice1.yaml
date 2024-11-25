@@ -3,3 +3,27 @@ service:
   identifier: remoteservice1
   orgIdentifier: default
   projectIdentifier: saran_test
+  serviceDefinition:
+    spec:
+      release:
+        name: release-<+INFRA_KEY_SHORT_ID>
+      variables:
+        - name: var1
+          type: String
+          description: ""
+          required: false
+          value: asd
+      artifacts:
+        primary:
+          primaryArtifactRef: <+input>
+          sources:
+            - name: service-artifact
+              identifier: serviceartifact
+              template:
+                templateRef: account.Nextgen_RxMgt_ECR_Template
+                versionLabel: v1.0.0
+                templateInputs:
+                  type: Ecr
+                  spec:
+                    tag: <+input>
+    type: Kubernetes
