@@ -23,7 +23,7 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: echo heelo
+                        script: <+input>
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
