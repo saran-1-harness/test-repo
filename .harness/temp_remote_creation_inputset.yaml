@@ -1,0 +1,22 @@
+inputSet:
+  name: temp remote creation inputset
+  identifier: temp_remote_creation_inputset
+  orgIdentifier: default
+  projectIdentifier: saran_test
+  pipeline:
+    identifier: temp_remote_creation
+    stages:
+      - stage:
+          identifier: s1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo hellooooooo
