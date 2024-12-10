@@ -1,7 +1,7 @@
 pipeline:
   name: remote-pipeline21
   identifier: remotepipeline21
-  projectIdentifier: testproj
+  projectIdentifier: saran_test
   orgIdentifier: default
   tags: {}
   stages:
