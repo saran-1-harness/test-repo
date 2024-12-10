@@ -1,0 +1,30 @@
+pipeline:
+  name: temp remote creation
+  identifier: temp_remote_creation
+  tags: {}
+  projectIdentifier: saran_test
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo heelo
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
