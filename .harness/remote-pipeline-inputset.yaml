@@ -1,0 +1,50 @@
+inputSet:
+  name: remoteinputset
+  identifier: remoteinputset
+  orgIdentifier: default
+  projectIdentifier: saran_test
+  pipeline:
+    identifier: remotepipeline
+    stages:
+      - stage:
+          identifier: s1
+          type: Deployment
+          spec:
+            services:
+              values:
+                - serviceInputs:
+                    serviceDefinition:
+                      type: Kubernetes
+                      spec:
+                        manifests:
+                          - manifest:
+                              identifier: manifestname
+                              type: HelmChart
+                              spec:
+                                store:
+                                  type: CustomRemote
+                                  spec:
+                                    extractionScript: echo heelo
+                  serviceRef: k8
+                - serviceInputs:
+                    serviceDefinition:
+                      type: Kubernetes
+                      spec:
+                        artifacts:
+                          primary:
+                            primaryArtifactRef: docker
+                            sources:
+                              - identifier: docker
+                                type: DockerRegistry
+                                spec:
+                                  tag: <+input>.executionInput()
+                  serviceRef: dummy_service_1
+            environments:
+              values:
+                - infrastructureDefinitions: <+input>
+                  environmentRef: New_Environment_1
+                - environmentRef: ebnv1
+                  infrastructureDefinitions:
+                    - identifier: infra1
+                - infrastructureDefinitions: <+input>
+                  environmentRef: hnt
