@@ -1,6 +1,6 @@
 pipeline:
-  name: shell-script
-  identifier: shellscript
+  name: test-shell-pipeline.yaml
+  identifier: test_shell_pipeline
   tags: {}
   projectIdentifier: saran_test
   orgIdentifier: default
