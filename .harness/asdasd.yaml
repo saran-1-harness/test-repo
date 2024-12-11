@@ -1,0 +1,22 @@
+inputSet:
+  name: asdasd
+  identifier: asdasd
+  orgIdentifier: default
+  projectIdentifier: saran_test
+  pipeline:
+    identifier: test_shell_pipeline
+    stages:
+      - stage:
+          identifier: s1_iden
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: asdasd
