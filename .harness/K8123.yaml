@@ -1,0 +1,5 @@
+service:
+  name: K8123
+  identifier: K8123
+  orgIdentifier: default
+  projectIdentifier: ShivamTemplate
