@@ -25,7 +25,7 @@ pipeline:
                   variables:
                     - name: varStage
                       type: String
-                      value: <+input>
+                      value: "123345"
           environment:
             environmentRef: <+input>
             deployToAll: false
