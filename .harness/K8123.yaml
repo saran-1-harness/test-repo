@@ -20,3 +20,4 @@ service:
           required: false
           value: <+input>
     type: Kubernetes
+  description: "\"\""
