@@ -1,0 +1,21 @@
+template:
+  name: step-template-1-with long name with long name with long name with long name
+  identifier: steptemplate1with_long_name_with_long_name_with_long_name_with_long_name
+  versionLabel: "1"
+  type: Step
+  projectIdentifier: saran_test
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: echo hello
+      environmentVariables: []
+      outputVariables: []
