@@ -1,0 +1,41 @@
+template:
+  name: stage-template1
+  type: Stage
+  projectIdentifier: sample
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: ShellScript_1
+              identifier: ShellScript_1
+              spec:
+                shell: Bash
+                executionTarget: {}
+                source:
+                  type: Inline
+                  spec:
+                    script: echo asd
+                environmentVariables: []
+                outputVariables: []
+              timeout: 10m
+          - step:
+              type: ShellScript
+              name: ShellScript_2
+              identifier: ShellScript_2
+              spec:
+                shell: Bash
+                executionTarget: {}
+                source:
+                  type: Inline
+                  spec:
+                    script: <+input>
+                environmentVariables: []
+                outputVariables: []
+              timeout: 10m
+  identifier: stagetemplate1
+  versionLabel: v1
