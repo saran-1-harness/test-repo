@@ -1,0 +1,34 @@
+pipeline:
+  name: pipe73
+  identifier: pipe73
+  projectIdentifier: sample
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: s1
+        identifier: s1
+        tags: {}
+        template:
+          templateRef: stagetemp
+          versionLabel: v2
+          templateInputs:
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      identifier: ShellScript_2
+                      type: ShellScript
+                      spec:
+                        source:
+                          type: Inline
+                          spec:
+                            script: <+input>
+    - stage:
+        name: s2
+        identifier: s2
+        tags: {}
+        template:
+          templateRef: stagetemp
+          versionLabel: v1
