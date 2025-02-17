@@ -1,0 +1,53 @@
+template:
+  name: PipelineOrgRemote
+  identifier: PipelineOrgRemote
+  versionLabel: v1
+  type: Pipeline
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: S12
+          identifier: S12
+          tags: {}
+          template:
+            templateRef: org.StageOrg
+            versionLabel: v1
+            templateInputs:
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - step:
+                        identifier: S123
+                        template:
+                          templateInputs:
+                            type: ShellScript
+                            spec:
+                              source:
+                                type: Inline
+                                spec:
+                                  script: <+input>
+      - stage:
+          name: S123
+          identifier: S123
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    name: S213
+                    identifier: S213
+                    template:
+                      templateRef: org.StepOrg
+                      versionLabel: v1
+                      templateInputs:
+                        type: ShellScript
+                        spec:
+                          source:
+                            type: Inline
+                            spec:
+                              script: <+input>
+          tags: {}
