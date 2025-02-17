@@ -1,0 +1,25 @@
+template:
+  name: StageOrg
+  identifier: StageOrg
+  versionLabel: v1
+  type: Stage
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              name: S123
+              identifier: S123
+              template:
+                templateRef: org.StepOrg
+                versionLabel: v1
+                templateInputs:
+                  type: ShellScript
+                  spec:
+                    source:
+                      type: Inline
+                      spec:
+                        script: <+input>
