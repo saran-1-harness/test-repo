@@ -1,0 +1,30 @@
+pipeline:
+  name: PIpelon123
+  identifier: PIpelon123
+  projectIdentifier: ShivamTemplate
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: S123
+        identifier: S123
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  name: S123
+                  identifier: S123
+                  template:
+                    templateRef: org.StepOrg
+                    versionLabel: v1
+                    templateInputs:
+                      type: ShellScript
+                      timeout: <+input>
+                      spec:
+                        source:
+                          type: Inline
+                          spec:
+                            script: <+input>
+        tags: {}
