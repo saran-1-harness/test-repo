@@ -24,7 +24,7 @@ template:
                     script: <+input>
                 environmentVariables: []
                 outputVariables: []
-              timeout: <+input>
+              timeout: 10m
     variables:
       - name: var1
         type: String
