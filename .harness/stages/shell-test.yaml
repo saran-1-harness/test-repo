@@ -1,0 +1,39 @@
+template:
+  name: stage-temp-reconciletest
+  identifier: stagetempreconciletest
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: saran_test
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: ShellScript_1
+              identifier: ShellScript_1
+              spec:
+                shell: Bash
+                executionTarget: {}
+                source:
+                  type: Inline
+                  spec:
+                    script: <+input>
+                environmentVariables: []
+                outputVariables: []
+              timeout: 10m
+    variables:
+      - name: var1
+        type: String
+        default: hello
+        description: ""
+        required: false
+        value: <+input>.default(hello)
+      - name: var2
+        type: String
+        description: ""
+        required: false
+        value: <+input>.default(1)
