@@ -31,7 +31,7 @@ template:
         default: hello
         description: ""
         required: false
-        value: <+input>
+        value: <+input>.default("hello")
       - name: var2
         type: String
         description: ""
