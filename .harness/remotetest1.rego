@@ -10,7 +10,8 @@ deny[msg] {
 	not stages_with_approval[i]
 
 	# Show a human-friendly error message
-	# edited
+	# edited 1
+	# edited 2
 	msg := sprintf("deployment stages '%s' does not have aa HarnessaaaAAApprhoval step", [input.pipeline.stages[i].stage.name])
 }
 
