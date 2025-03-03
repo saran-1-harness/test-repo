@@ -14,7 +14,6 @@ template:
           identifier: step1
           template:
             templateRef: stepPIPE25105
-            versionLabel: v1
             templateInputs:
               type: ShellScript
               spec:
