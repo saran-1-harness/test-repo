@@ -19,6 +19,6 @@ template:
       environmentVariables:
         - name: var1
           type: String
-          value: ""
+          value: <+input>
       outputVariables: []
   versionLabel: v2
