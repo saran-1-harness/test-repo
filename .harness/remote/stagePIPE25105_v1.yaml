@@ -1,0 +1,32 @@
+template:
+  name: stage-PIPE-25105
+  identifier: stagePIPE25105
+  versionLabel: v1
+  type: Stage
+  projectIdentifier: saranremotetest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - stepGroup:
+              name: stp-grp-temp
+              identifier: stpgrptemp
+              template:
+                templateRef: stepgrpPIPE25105
+                templateInputs:
+                  steps:
+                    - step:
+                        identifier: step1
+                        template:
+                          templateInputs:
+                            type: ShellScript
+                            spec:
+                              source:
+                                type: Inline
+                                spec:
+                                  script: <+input>
+        rollbackSteps: []
+      serviceDependencies: []
