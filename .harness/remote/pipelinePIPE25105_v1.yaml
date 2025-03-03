@@ -1,0 +1,36 @@
+template:
+  name: pipeline-PIPE-25105
+  identifier: pipelinePIPE25105
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: saranremotetest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: stage-temp
+          identifier: stagetemp
+          tags: {}
+          template:
+            templateRef: stagePIPE25105
+            templateInputs:
+              type: Custom
+              spec:
+                execution:
+                  steps:
+                    - stepGroup:
+                        identifier: stpgrptemp
+                        template:
+                          templateInputs:
+                            steps:
+                              - step:
+                                  identifier: step1
+                                  template:
+                                    templateInputs:
+                                      type: ShellScript
+                                      spec:
+                                        source:
+                                          type: Inline
+                                          spec:
+                                            script: <+input>
