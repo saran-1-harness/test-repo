@@ -1,0 +1,24 @@
+template:
+  name: step-grp-PIPE-25105
+  identifier: stepgrpPIPE25105
+  versionLabel: v1
+  type: StepGroup
+  projectIdentifier: saranremotetest
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stageType: Custom
+    steps:
+      - step:
+          name: step1
+          identifier: step1
+          template:
+            templateRef: stepPIPE25105
+            versionLabel: v1
+            templateInputs:
+              type: ShellScript
+              spec:
+                source:
+                  type: Inline
+                  spec:
+                    script: <+input>
