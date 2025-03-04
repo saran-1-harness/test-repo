@@ -38,3 +38,6 @@ template:
                                           - name: var1
                                             type: String
                                             value: <+input>
+                                          - name: var2
+                                            type: String
+                                            value: <+input>
