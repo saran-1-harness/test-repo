@@ -1,0 +1,21 @@
+template:
+  name: sfdf
+  identifier: sfdf
+  versionLabel: v1
+  type: Step
+  projectIdentifier: saran_test
+  orgIdentifier: default
+  tags: {}
+  spec:
+    timeout: 10m
+    type: ShellScript
+    spec:
+      shell: Bash
+      executionTarget: {}
+      delegateSelectors: []
+      source:
+        type: Inline
+        spec:
+          script: sdf
+      environmentVariables: []
+      outputVariables: []
