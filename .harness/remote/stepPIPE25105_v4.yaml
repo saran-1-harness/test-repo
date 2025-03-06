@@ -16,6 +16,9 @@ template:
         type: Inline
         spec:
           script: <+input>
-      environmentVariables: []
+      environmentVariables:
+        - name: var1
+          type: String
+          value: <+input>
       outputVariables: []
   versionLabel: v4
