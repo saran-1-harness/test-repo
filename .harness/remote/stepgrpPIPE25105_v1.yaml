@@ -21,13 +21,3 @@ template:
                   type: Inline
                   spec:
                     script: <+input>
-                environmentVariables:
-                  - name: var1
-                    type: String
-                    value: <+input>
-                  - name: var2
-                    type: String
-                    value: <+input>
-                  - name: var3
-                    type: String
-                    value: <+input>
