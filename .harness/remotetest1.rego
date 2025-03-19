@@ -9,7 +9,7 @@ deny[msg] {
 	# ... that are not in the set of stages with HarnessApproval steps
 	not stages_with_approval[i]
 
-	# Show a human-friendly error message
+	# Show a human-friendly error messagev
 	# edited 1
 	# edited 2.2.1.1.5
 	# edited 3.1.1
