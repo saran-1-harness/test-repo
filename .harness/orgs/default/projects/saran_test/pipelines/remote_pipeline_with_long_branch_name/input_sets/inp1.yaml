@@ -1,0 +1,22 @@
+inputSet:
+  name: inp1
+  identifier: inp1
+  orgIdentifier: default
+  projectIdentifier: saran_test
+  pipeline:
+    identifier: remote_pipeline_with_long_branch_name
+    stages:
+      - stage:
+          identifier: s1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_2
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo "hello 2"
