@@ -63,9 +63,3 @@ template:
                   - AllErrors
                 action:
                   type: StageRollback
-          variables:
-            - name: var1
-              type: String
-              description: ""
-              required: false
-              value: <+input>.allowedValues(a, b)
