@@ -1,0 +1,16 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: test_sathish
+name: test sathish
+owner: group:account/AAAFF
+orgIdentifier: default
+projectIdentifier: sdtetst
+spec:
+  lifecycle: production
+  ownedBy:
+  - group:account/AAAFF
+metadata:
+  description: test sathish
+  tags:
+  - rest
