@@ -1,0 +1,36 @@
+apiVersion: harness.io/v1
+kind: Component
+type: service
+identifier: edwedwe
+name: edwedwe
+owner: group:account/AAAFF
+orgIdentifier: default
+projectIdentifier: AtlasOne
+spec:
+  lifecycle: production
+  ownedBy:
+  - group:account/AAAFF
+metadata:
+  annotations:
+    jenkins.io/github-folder: danf-test/test
+    github.com/project-slug: https://github.com/wings-software/e2e-enterprise-demo
+    backstage.io/kubernetes-id: adservice
+    backstage.io/kubernetes-namespace: atlasone-prod
+    backstage.io/source-location: url:https://app.harness.io/ng/account/EeRjnXTnS4GrLG5VNNJZUw/module/code/orgs/demo/repos/IDP-catalog-examples/files/main/~/catalog-examples/Service/boutique/boutique_adservice/
+  links:
+  - url: http://34.67.7.165/
+    title: Prod Website
+    icon: dashboard
+    type: AtlasOne FrontEnd
+  - url: http://34.28.46.65
+    title: QA Website
+    icon: dashboard
+    type: AtlasOne FrontEnd
+  - url: http://34.135.60.81/
+    title: Dev Website
+    icon: dashboard
+    type: AtlasOne FrontEnd
+  tags:
+  - bn
+  - rest
+  - store
