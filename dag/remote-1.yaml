@@ -1,6 +1,6 @@
 pipeline:
-  name: 1 node
-  identifier: _node
+  name: 1 node 2
+  identifier: _2node
   tags: {}
   projectIdentifier: DAG
   orgIdentifier: Saran_Org
