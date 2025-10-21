@@ -7,10 +7,7 @@ pipeline:
   stages:
     - parallel:
         - stage:
-            name: s323
-            identifier: s32e
-            description: ""
-            type: Custom
+
             spec:
               execution:
                 steps:
