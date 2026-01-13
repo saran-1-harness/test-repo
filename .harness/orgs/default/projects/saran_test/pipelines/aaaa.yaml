@@ -23,7 +23,7 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: echo asdasd
+                        script: <+input>
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
