@@ -27,4 +27,5 @@ pipeline:
                           type: Inline
                           spec:
                             script: <+input>
+                        includeInfraSelectors: <+input>
         tags: {}
