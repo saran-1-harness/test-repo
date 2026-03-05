@@ -1,6 +1,6 @@
 package pipeline
 
-# OPA
+# OPA 1
 
 # Deny pipelines that don't have an approval step
 # NOTE: Try removing the HarnessApproval step from your input to see the policy fail
