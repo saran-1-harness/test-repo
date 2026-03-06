@@ -1,5 +1,7 @@
 package pipeline
 
+# main 6
+
 # Deny pipelines that don't have an approval step
 # NOTE: Try removing the HarnessApproval step from your input to see the policy fail
 deny[msg] {
