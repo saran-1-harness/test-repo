@@ -1,6 +1,6 @@
 package pipeline
 
-# main
+# opa-main-2
 
 # Deny pipelines that are missing required steps
 # NOTE: Try adding "ShellScript" to the 'required_steps' list to see the policy fail
