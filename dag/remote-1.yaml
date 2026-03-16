@@ -70,7 +70,7 @@ pipeline:
                     source:
                       type: Inline
                       spec:
-                        script: sd
+                        script: sdf
                     environmentVariables: []
                     outputVariables: []
                   timeout: 10m
