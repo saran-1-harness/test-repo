@@ -1,0 +1,299 @@
+pipeline:
+  name: Test normal pipeline flow after DAG changes
+  identifier: Test_normal_pipeline_flow_after_DAG_changes
+  projectIdentifier: Saran_Test
+  orgIdentifier: Saran_Org
+  tags: {}
+  stages:
+    - parallel:
+        - stage:
+            name: s1
+            identifier: s1
+            description: ""
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      type: ShellScript
+                      name: ShellScript_1
+                      identifier: ShellScript_1
+                      spec:
+                        shell: Bash
+                        executionTarget: {}
+                        source:
+                          type: Inline
+                          spec:
+                            script: echo hello
+                        environmentVariables: []
+                        outputVariables: []
+                      timeout: 10m
+                  - step:
+                      type: Wait
+                      name: Wait_1
+                      identifier: Wait_1
+                      spec:
+                        duration: 10m
+                  - stepGroup:
+                      name: sww
+                      identifier: sww
+                      steps:
+                        - step:
+                            type: ShellScript
+                            name: ShellScript_2
+                            identifier: ShellScript_2
+                            spec:
+                              shell: Bash
+                              executionTarget: {}
+                              source:
+                                type: Inline
+                                spec:
+                                  script: echo hasd
+                              environmentVariables: []
+                              outputVariables: []
+                            timeout: 10m
+                        - parallel:
+                            - step:
+                                type: ShellScript
+                                name: ShellScript_3
+                                identifier: ShellScript_3
+                                spec:
+                                  shell: Bash
+                                  executionTarget: {}
+                                  source:
+                                    type: Inline
+                                    spec:
+                                      script: echo asdsa
+                                  environmentVariables: []
+                                  outputVariables: []
+                                timeout: 10m
+                            - stepGroup:
+                                name: asdsads
+                                identifier: asdsads
+                                steps:
+                                  - parallel:
+                                      - step:
+                                          type: ShellScript
+                                          name: ShellScript_4
+                                          identifier: ShellScript_4
+                                          spec:
+                                            shell: Bash
+                                            executionTarget: {}
+                                            source:
+                                              type: Inline
+                                              spec:
+                                                script: echo adsd
+                                            environmentVariables: []
+                                            outputVariables: []
+                                          timeout: 10m
+                                      - step:
+                                          type: ShellScript
+                                          name: ShellScript_5
+                                          identifier: ShellScript_5
+                                          spec:
+                                            shell: Bash
+                                            executionTarget: {}
+                                            source:
+                                              type: Inline
+                                              spec:
+                                                script: echo adsd
+                                            environmentVariables: []
+                                            outputVariables: []
+                                          timeout: 10m
+            tags: {}
+        - stage:
+            name: s2
+            identifier: s2
+            description: ""
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      type: ShellScript
+                      name: ShellScript_1
+                      identifier: ShellScript_1
+                      spec:
+                        shell: Bash
+                        executionTarget: {}
+                        source:
+                          type: Inline
+                          spec:
+                            script: echo hello
+                        environmentVariables: []
+                        outputVariables: []
+                      timeout: 10m
+            tags: {}
+        - stage:
+            name: s3
+            identifier: s3
+            description: ""
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      type: ShellScript
+                      name: ShellScript_1
+                      identifier: ShellScript_1
+                      spec:
+                        shell: Bash
+                        executionTarget: {}
+                        source:
+                          type: Inline
+                          spec:
+                            script: echo hello
+                        environmentVariables: []
+                        outputVariables: []
+                      timeout: 10m
+            tags: {}
+    - parallel:
+        - stage:
+            name: s4
+            identifier: s4
+            description: ""
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      type: ShellScript
+                      name: ShellScript_1
+                      identifier: ShellScript_1
+                      spec:
+                        shell: Bash
+                        executionTarget: {}
+                        source:
+                          type: Inline
+                          spec:
+                            script: echo hello
+                        environmentVariables: []
+                        outputVariables: []
+                      timeout: 10m
+            tags: {}
+        - stage:
+            name: s6
+            identifier: s6
+            description: ""
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      type: ShellScript
+                      name: ShellScript_1
+                      identifier: ShellScript_1
+                      spec:
+                        shell: Bash
+                        executionTarget: {}
+                        source:
+                          type: Inline
+                          spec:
+                            script: echo hello
+                        environmentVariables: []
+                        outputVariables: []
+                      timeout: 10m
+                  - step:
+                      name: test reference
+                      identifier: test_reference
+                      template:
+                        templateRef: custom_icon_2
+                        versionLabel: v1
+            tags: {}
+            strategy:
+              parallelism: 4
+        - stage:
+            name: s5
+            identifier: s5
+            description: ""
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      type: ShellScript
+                      name: ShellScript_1
+                      identifier: ShellScript_1
+                      spec:
+                        shell: Bash
+                        executionTarget: {}
+                        source:
+                          type: Inline
+                          spec:
+                            script: echo hello
+                        environmentVariables: []
+                        outputVariables: []
+                      timeout: 10m
+            tags: {}
+    - parallel:
+        - stage:
+            name: s7
+            identifier: s7
+            description: ""
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      type: ShellScript
+                      name: ShellScript_1
+                      identifier: ShellScript_1
+                      spec:
+                        shell: Bash
+                        executionTarget: {}
+                        source:
+                          type: Inline
+                          spec:
+                            script: echo hello
+                        environmentVariables: []
+                        outputVariables: []
+                      timeout: 10m
+            tags: {}
+        - stage:
+            name: s9
+            identifier: s9
+            description: ""
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      type: ShellScript
+                      name: ShellScript_1
+                      identifier: ShellScript_1
+                      spec:
+                        shell: Bash
+                        executionTarget: {}
+                        source:
+                          type: Inline
+                          spec:
+                            script: echo hello
+                        environmentVariables: []
+                        outputVariables: []
+                      timeout: 10m
+            tags: {}
+        - stage:
+            name: s8
+            identifier: s8
+            description: ""
+            type: Custom
+            spec:
+              execution:
+                steps:
+                  - step:
+                      type: ShellScript
+                      name: ShellScript_1
+                      identifier: ShellScript_1
+                      spec:
+                        shell: Bash
+                        executionTarget: {}
+                        source:
+                          type: Inline
+                          spec:
+                            script: echo hello
+                        environmentVariables: []
+                        outputVariables: []
+                      timeout: 10m
+            tags: {}
+            strategy:
+              parallelism: 4
