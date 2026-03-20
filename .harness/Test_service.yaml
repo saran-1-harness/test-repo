@@ -1,0 +1,9 @@
+service:
+  name: Test_service
+  identifier: Test_service
+  serviceDefinition:
+    type: WinRm
+    spec: {}
+  gitOpsEnabled: false
+  orgIdentifier: Saran_Org
+  projectIdentifier: Saran_Test
