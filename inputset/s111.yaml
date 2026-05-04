@@ -1,0 +1,22 @@
+inputSet:
+  name: s111
+  identifier: s111
+  orgIdentifier: Saran_Org
+  projectIdentifier: Saran_Test
+  pipeline:
+    identifier: Test_move_to_git_flow
+    stages:
+      - stage:
+          identifier: s1
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_2
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: <+input>.executionInput()
