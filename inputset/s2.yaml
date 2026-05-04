@@ -1,5 +1,6 @@
 inputSet:
   name: s2
+  tags: {}
   identifier: s2
   orgIdentifier: Saran_Org
   projectIdentifier: Saran_Test
@@ -19,4 +20,4 @@ inputSet:
                       source:
                         type: Inline
                         spec:
-                          script: <+input>.executionInput()
+                          script: <+input>
