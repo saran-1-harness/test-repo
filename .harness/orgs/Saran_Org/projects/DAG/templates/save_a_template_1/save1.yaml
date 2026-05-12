@@ -1,0 +1,26 @@
+template:
+  name: save a template 1
+  type: Stage
+  projectIdentifier: DAG
+  orgIdentifier: Saran_Org
+  spec:
+    type: Custom
+    spec:
+      execution:
+        steps:
+          - step:
+              type: ShellScript
+              name: ShellScript_1
+              identifier: ShellScript_1
+              spec:
+                shell: Bash
+                executionTarget: {}
+                source:
+                  type: Inline
+                  spec:
+                    script: sdfhs
+                environmentVariables: []
+                outputVariables: []
+              timeout: 10m
+  identifier: save_a_template_1
+  versionLabel: v1
