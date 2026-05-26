@@ -1,0 +1,5 @@
+service:
+  name: remote check 1
+  identifier: remote_check_1
+  orgIdentifier: Saran_Org
+  projectIdentifier: Saran_Test
