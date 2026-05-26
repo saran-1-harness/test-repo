@@ -1,0 +1,24 @@
+service:
+  name: remote-service_kubernetes_de1ds
+  identifier: remote_service_kubernetes_de1ds
+  tags: {}
+  serviceDefinition:
+    type: Kubernetes
+    spec:
+      manifests:
+        - manifest:
+            identifier: k8 manifest
+            spec:
+              store:
+                spec:
+                  connectorRef: <+input>
+                  repoName: <+input>
+                  gitFetchType: Branch
+                  branch: <+input>
+                  paths: <+input>
+                type: Github
+              optionalValuesYaml: false
+              enableDeclarativeRollback: false
+              skipResourceVersioning: false
+            type: K8sManifest
+      artifacts: {}
