@@ -1,0 +1,8 @@
+service:
+  name: service_kubernetes_remote-2
+  identifier: service_kubernetes_remote_2
+  tags: {}
+  serviceDefinition:
+    type: Kubernetes
+    spec:
+      artifacts: {}
