@@ -21,7 +21,7 @@ template:
                 source:
                   type: Inline
                   spec:
-                    script: echo hello
+                    script: echo hello-main2
                 environmentVariables: []
                 outputVariables: []
               timeout: 10m
