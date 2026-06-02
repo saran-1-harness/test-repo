@@ -1,0 +1,8 @@
+environment:
+  name: environment_env_4ad6 remote 2
+  identifier: environment_env_4ad6_remote_2
+  description: ""
+  tags: {}
+  type: PreProduction
+  orgIdentifier: Saran_Org
+  projectIdentifier: _0_test
