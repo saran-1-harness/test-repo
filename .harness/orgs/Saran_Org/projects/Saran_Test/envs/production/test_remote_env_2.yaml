@@ -1,6 +1,8 @@
 environment:
   name: test remote env 2
   identifier: test_remote_env_2
+  description: Description 1
+  tags: {}
+  type: Production
   orgIdentifier: Saran_Org
   projectIdentifier: Saran_Test
-  type: Production
