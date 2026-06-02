@@ -1,0 +1,8 @@
+environment:
+  name: remote 1
+  identifier: remote_1
+  description: ""
+  tags: {}
+  type: PreProduction
+  orgIdentifier: Saran_Org
+  projectIdentifier: _0_test
