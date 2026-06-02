@@ -1,7 +1,7 @@
 environment:
   name: test-remote-ng
   identifier: testremoteng
-  description: main
+  description: env-ng-1
   tags: {}
   type: PreProduction
   orgIdentifier: Saran_Org
