@@ -1,7 +1,7 @@
 environment:
   name: environment_env_c342 remote test 1
   identifier: environment_env_c342_remote_test_1
-  description: main
+  description: main-env-1
   tags: {}
   type: PreProduction
   orgIdentifier: Saran_Org
