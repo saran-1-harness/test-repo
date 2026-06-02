@@ -1,7 +1,9 @@
 service:
   name: service_kubernetes_5616 remote test 3
   identifier: service_kubernetes_5616_remote_test_3
+  description: main
   tags: {}
   serviceDefinition:
     type: Kubernetes
-    spec: {}
+    spec:
+      artifacts: {}
