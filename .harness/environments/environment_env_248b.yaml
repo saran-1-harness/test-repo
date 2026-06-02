@@ -1,7 +1,7 @@
 environment:
   name: remote 1
   identifier: remote_1
-  description: ""
+  description: main 1
   tags: {}
   type: PreProduction
   orgIdentifier: Saran_Org
