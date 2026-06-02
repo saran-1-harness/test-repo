@@ -1,0 +1,6 @@
+environment:
+  name: test-remote-ng
+  identifier: testremoteng
+  orgIdentifier: Saran_Org
+  projectIdentifier: Saran_Test
+  type: PreProduction
