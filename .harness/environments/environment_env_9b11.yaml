@@ -1,7 +1,7 @@
 environment:
   name: test remote unified
   identifier: test_remote_unified
-  description: ""
+  description: main
   tags: {}
   type: PreProduction
   orgIdentifier: Saran_Org
