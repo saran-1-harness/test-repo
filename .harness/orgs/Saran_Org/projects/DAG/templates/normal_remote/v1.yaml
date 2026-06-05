@@ -1,0 +1,56 @@
+template:
+  name: normal remote
+  type: Pipeline
+  projectIdentifier: DAG
+  orgIdentifier: Saran_Org
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: s1
+          identifier: s1
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo hello
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: 10m
+          tags: {}
+      - stage:
+          name: s2
+          identifier: s2
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo jjhq
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: 10m
+          tags: {}
+  identifier: normal_remote
+  versionLabel: v1
