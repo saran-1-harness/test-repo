@@ -1,0 +1,9 @@
+---
+environment:
+  description: "main"
+  tags: {}
+  type: "PreProduction"
+  orgIdentifier: "Saran_Org"
+  projectIdentifier: "_0_test"
+  identifier: "environment_env_a9b_remote_1_Clone_main_4_Clone_2_Clone"
+  name: "environment_env_a9b remote 1 - Clone - main 4- Clone 2 - Clone"
