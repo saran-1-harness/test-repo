@@ -5,5 +5,5 @@ pipeline:
       steps:
         - name: Step 1
           id: step1
-          run: 
-            script: echo "hello world"
+          run:
+            script: echo "hello world 1 trigger"
