@@ -1,0 +1,19 @@
+pipeline:
+  stages:
+    - name: snow 1
+      id: snow_1
+      steps:
+        - name: snow 1
+          id: snow_1
+          deploy:
+            uses: serviceNowCreate
+            with:
+              connector: account.testSomething
+              ticket_type: sn_ai_governance_assessment_request
+              create_ticket_options: Fields
+              fields:
+                - key: assigned_to
+                  value: as
+                - key: asset
+                  value: <+input>
+              log_level: error
