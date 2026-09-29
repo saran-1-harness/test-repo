@@ -9,13 +9,11 @@ pipeline:
             uses: serviceNowCreate
             with:
               connector: account.testSomething
-              ticket_type: sn_ai_governance_assessment_request
+              ticket_type: release_task
               create_ticket_options: Fields
               fields:
                 - key: active
-                  value: <+input>
-                - key: assigned_to
-                  value: <+input>
-                - key: asset
+                  value: true
+                - key: percent_complete
                   value: <+input>
               log_level: error
