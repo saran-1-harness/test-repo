@@ -25,3 +25,26 @@ pipeline:
                 - key: actual_end_date
                   value: <+input>
               log_level: error
+    - name: serial_grp
+      id: serial_grp
+      group:
+        stages:
+          - name: S1
+            id: S1
+            steps:
+              - name: snow create
+                id: snow_create
+                deploy:
+                  uses: serviceNowCreate
+                  with:
+                    connector: account.testSomething
+                    ticket_type: asset_task
+                    create_ticket_options: Fields
+                    fields:
+                      - key: active
+                        value: <+input>
+                      - key: activity_due
+                        value: <+input>
+                      - key: u_servicenowtest
+                        value: true
+                    log_level: error
