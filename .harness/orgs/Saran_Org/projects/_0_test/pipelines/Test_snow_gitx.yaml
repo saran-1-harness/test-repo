@@ -16,6 +16,8 @@ pipeline:
                   value: true
                 - key: work_end
                   value: a
+                - key: work_start
+                  value: <+input>
                 - key: activity_due
                   value: <+input>
                 - key: percent_complete
