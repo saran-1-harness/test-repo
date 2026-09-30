@@ -32,8 +32,8 @@ pipeline:
           - name: S1
             id: S1
             steps:
-              - name: parallel_group_a5d6
-                id: parallel_group_a5d6
+              - name: parallel_group_737c
+                id: parallel_group_737c
                 parallel:
                   steps:
                     - name: snow create
@@ -42,17 +42,27 @@ pipeline:
                         uses: serviceNowCreate
                         with:
                           connector: account.testSomething
-                          ticket_type: asset_task
+                          ticket_type: sn_ai_governance_assessment_request
                           create_ticket_options: Fields
                           fields:
-                            - key: active
+                            - key: assigned_to
                               value: <+input>
-                            - key: activity_due
+                            - key: asset
                               value: <+input>
-                            - key: u_servicenowtest
-                              value: true
                           log_level: error
-                    - name: runn
-                      run:
-                        script: <+input>
-                      id: runn
+                    - name: asd
+                      id: asd
+                      deploy:
+                        uses: k8sPatchStep
+                        with:
+                          workload: <+input>
+                          strategy: <+input>
+                          skip_steady_state_check: false
+                          steady_state_timeout: 5m
+                          describe_resources: false
+                          kubeconfig: ${{infra.kube_config_path}}
+                          namespace: ${{infra.namespace}}
+                          release: ${{infra.releaseName}}
+                          patch_timeout: 5m
+                          log_level: info
+                          is_openshift: false
