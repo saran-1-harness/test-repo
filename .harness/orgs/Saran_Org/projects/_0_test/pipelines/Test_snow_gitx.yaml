@@ -32,19 +32,27 @@ pipeline:
           - name: S1
             id: S1
             steps:
-              - name: snow create
-                id: snow_create
-                deploy:
-                  uses: serviceNowCreate
-                  with:
-                    connector: account.testSomething
-                    ticket_type: asset_task
-                    create_ticket_options: Fields
-                    fields:
-                      - key: active
-                        value: <+input>
-                      - key: activity_due
-                        value: <+input>
-                      - key: u_servicenowtest
-                        value: true
-                    log_level: error
+              - name: parallel_group_a5d6
+                id: parallel_group_a5d6
+                parallel:
+                  steps:
+                    - name: snow create
+                      id: snow_create
+                      deploy:
+                        uses: serviceNowCreate
+                        with:
+                          connector: account.testSomething
+                          ticket_type: asset_task
+                          create_ticket_options: Fields
+                          fields:
+                            - key: active
+                              value: <+input>
+                            - key: activity_due
+                              value: <+input>
+                            - key: u_servicenowtest
+                              value: true
+                          log_level: error
+                    - name: runn
+                      run:
+                        script: <+input>
+                      id: runn
