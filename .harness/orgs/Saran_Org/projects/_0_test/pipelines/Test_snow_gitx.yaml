@@ -19,7 +19,7 @@ pipeline:
                 - key: activity_due
                   value: <+input>
                 - key: percent_complete
-                  value: "60"
+                  value: <+input>
                 - key: actual_end_date
                   value: <+input>
               log_level: error
