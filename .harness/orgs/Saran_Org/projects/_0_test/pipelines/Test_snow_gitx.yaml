@@ -14,6 +14,10 @@ pipeline:
               fields:
                 - key: active
                   value: true
+                - key: work_end
+                  value: a
+                - key: activity_due
+                  value: <+input>
                 - key: percent_complete
                   value: <+input>
               log_level: error
