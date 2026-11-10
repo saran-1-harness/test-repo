@@ -1,0 +1,34 @@
+template:
+  name: s2
+  identifier: s2
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: DAG
+  orgIdentifier: Saran_Org
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: v1
+          identifier: v1
+          description: ""
+          type: Custom
+          tags: {}
+          dependsOn: []
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo heelooo
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: 10m
