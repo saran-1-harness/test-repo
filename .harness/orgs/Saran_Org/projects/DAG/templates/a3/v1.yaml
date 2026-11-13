@@ -1,0 +1,81 @@
+template:
+  name: a3
+  identifier: a3
+  versionLabel: v1
+  type: Pipeline
+  projectIdentifier: DAG
+  orgIdentifier: Saran_Org
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: q
+          identifier: q
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo hello
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: 10m
+          tags: {}
+      - stage:
+          name: q1
+          identifier: q1
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo hello
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: 10m
+          tags: {}
+      - stage:
+          name: q2
+          identifier: q2
+          description: ""
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    type: ShellScript
+                    name: ShellScript_1
+                    identifier: ShellScript_1
+                    spec:
+                      shell: Bash
+                      executionTarget: {}
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo hello
+                      environmentVariables: []
+                      outputVariables: []
+                    timeout: 10m
+          tags: {}
+          dependsOn:
+            - q1
